@@ -65,7 +65,7 @@ void Print ()
 	cout << "\n";
 }
 
-int main ()
+int main (void)
 {
 	Enqueue (2);
 	Print ();

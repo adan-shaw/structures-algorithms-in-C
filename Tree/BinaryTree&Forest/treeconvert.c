@@ -35,7 +35,7 @@ void forestprevfix (tlink * forest, int size)
 
 tlink binarytree2tree (btlink btree)
 {
-	//only when binarytree root has no right child
+//only when binarytree root has no right child
 	if (!btree)
 		return NULL;
 	tlink tree = malloc (sizeof (struct Tree));

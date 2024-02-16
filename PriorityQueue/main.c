@@ -4,7 +4,7 @@
 #include "PriorityQueue.h"
 #define HEAPSIZE 100
 
-int main ()
+int main (void)
 {
 	struct Task *task;
 	int priority, i;

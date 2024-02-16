@@ -96,7 +96,7 @@ void bfs_search (int (*map)[NODESIZE])
 		if (step == NODESIZE - 1 && isneibor (map, currentnode->vertex, STARTNODE))
 		{
 			displayout_come (currentnode);
-			//break;
+//break;
 		}
 		getneibors (map, currentnode->vertex, neibors, &neiborsize);
 		for (i = 0; i < neiborsize; i++)
@@ -145,7 +145,7 @@ void dfs_search (int (*map)[NODESIZE])
 		if (currentnode->height == NODESIZE - 1 && isneibor (map, currentnode->vertex, STARTNODE))
 		{
 			displayout_come (currentnode);
-			//break;
+//break;
 		}
 		pop ();
 		getneibors (map, currentnode->vertex, neibors, &neiborsize);
@@ -178,7 +178,7 @@ void backtrace (int (*map)[NODESIZE], int *answer, int step, int *visited)
 		}
 }
 
-int main ()
+int main (void)
 {
 	int map[NODESIZE][NODESIZE] = {
 		{0, 1, 0, 0, 0, 1, 1},

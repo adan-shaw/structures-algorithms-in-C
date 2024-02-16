@@ -12,7 +12,7 @@ typedef struct BTree *btlink;
 int findposition_infix (int *seq, int head, int rear, int target)
 {
 	int i;
-	for (i = rear - 1; i >= 0; i--)	//一定要逆序查找，因为有权值相同的结点，如根节点=1，在中序里，这个1应该是是最后一个1
+	for (i = rear - 1; i >= 0; i--)	//一定要逆序查找, 因为有权值相同的结点, 如根节点=1, 在中序里, 这个1应该是是最后一个1
 		if (seq[i] == target)
 			return i;
 	return -1;
@@ -26,7 +26,7 @@ btlink create_binarytree (int *prefix, int *infix, int prefixhead, int prefixrea
 	int root_v = prefix[prefixhead];
 	new->vertex = root_v;
 	int root_position_infix = findposition_infix (infix, infixhead, infixrear, root_v);
-	//int leftsubtree_size=root_position_infix-infixhead;
+//int leftsubtree_size=root_position_infix-infixhead;
 	int split_prefix = root_position_infix - infixhead + prefixhead + 1;
 	new->left = create_binarytree (prefix, infix, prefixhead + 1, split_prefix, infixhead, root_position_infix);
 	new->right = create_binarytree (prefix, infix, split_prefix, prefixrear, root_position_infix + 1, infixrear);

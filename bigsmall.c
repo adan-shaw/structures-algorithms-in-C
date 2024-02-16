@@ -32,7 +32,7 @@ void method3 ()
 	unsigned short limit = (USHRT_MAX + 1) / 2;
 	unsigned short a = 0;
 	char name[1];
-	printf ("输入2字节字符串！\n");
+	printf ("输入2字节字符串!\n");
 	gets (name);
 	if (a >= limit)
 		printf ("大端\n");
@@ -40,7 +40,7 @@ void method3 ()
 		printf ("小端\n");
 }
 
-main ()
+int main (void)
 {
 	method1 ();
 	method2 ();

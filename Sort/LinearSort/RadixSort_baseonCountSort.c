@@ -46,7 +46,7 @@ void displayoutcome (int *data, int size)
 	printf ("\n");
 }
 
-int main ()
+int main (void)
 {
 	/*
 	 */

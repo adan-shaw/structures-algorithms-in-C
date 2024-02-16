@@ -123,7 +123,7 @@ int main (int argc, char const *argv[])
 	int value[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 };
 	tlink trietree = create_tree ();
 	for (int i = 0; i < N; i++)
-		//insert_node_r(trietree,string[i],0,strlen(string[i]),value[i]);
+//insert_node_r(trietree,string[i],0,strlen(string[i]),value[i]);
 		insert_node (trietree, string[i], value[i]);
 	for (int i = 0; i < N; i++)
 	{

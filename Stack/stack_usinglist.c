@@ -50,7 +50,7 @@ int pop_stack (slink stack)
 	return retval;
 }
 
-int main ()
+int main (void)
 {
 	slink stack = create_stack ();
 	int data[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };

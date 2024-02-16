@@ -49,7 +49,7 @@ int xyl (int *mygirl, int *myboy)
 	return counter;
 }
 
-int main ()
+int main (void)
 {
 	int mygirl[BOYSIZE] = { -1, -1, -1, -1 };
 	int myboy[GIRLSIZE] = { -1, -1, -1, -1 };

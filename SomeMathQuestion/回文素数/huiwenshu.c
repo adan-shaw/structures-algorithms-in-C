@@ -10,7 +10,7 @@ int isPalindrome (unsigned n)
 		np++;
 	}
 	leftdiv /= 10;
-	//now np是位数
+//now np是位数
 	np /= 2;
 	int i = 0;
 	unsigned left, right, leftnumb = n, rightnumb = n;

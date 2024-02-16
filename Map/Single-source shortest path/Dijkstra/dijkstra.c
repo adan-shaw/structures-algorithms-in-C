@@ -49,7 +49,7 @@ void dijkstra (struct Graph *map, struct Table **table)
 		cur = map->nodes[pos]->next;
 		while (cur)
 		{
-			//pos --> cur->vertex
+//pos --> cur->vertex
 			if (table[cur->vertex]->distance > table[pos]->distance + cur->weight)
 			{
 				table[cur->vertex]->distance = table[pos]->distance + cur->weight;

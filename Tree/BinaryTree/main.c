@@ -33,7 +33,7 @@ int main (int argc, char const *argv[])
 	btlink btree = NULL;
 	int i = 0;
 	while (i < size)
-		//insert_btree(&btree,data[i++]);
+//insert_btree(&btree,data[i++]);
 		btree = insert_btree_recursive (btree, data[i++]);
 	infix_recursive (btree);
 	printf ("\n");

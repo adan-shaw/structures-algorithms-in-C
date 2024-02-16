@@ -12,7 +12,7 @@ typedef struct BTree *btlink;
 int findposition_infix (int *infix, int head, int rear, int target)
 {
 	int i;
-	for (i = rear - 1; i >= 0; i--)	//一定要逆序查找，因为有权值相同的结点，如根节点=1，在中序里，这个1应该是是最后一个1
+	for (i = rear - 1; i >= 0; i--)	//一定要逆序查找, 因为有权值相同的结点, 如根节点=1, 在中序里, 这个1应该是是最后一个1
 		if (infix[i] == target)
 			return i;
 	return -1;

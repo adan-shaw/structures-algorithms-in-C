@@ -50,7 +50,7 @@ void hungary (struct Node *pset, int psize, struct Node *qset, int qsize)
 	showresult (match, pset, qsize, qset);
 }
 
-int main ()
+int main (void)
 {
 	struct Node pset[] = {
 		{5, 2}, {4, 1}, {5, 2}, {2, 1}, {2, 3}, {1, 2}, {5, 3}, {4, 5}, {2, 6}, {2, 2}

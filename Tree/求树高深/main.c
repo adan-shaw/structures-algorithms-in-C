@@ -27,7 +27,7 @@ void insertnode (struct Node **treep, int vertex)
 	{
 		parent = tree;
 		tree = tree->vertex >= vertex ? tree->left : tree->right;
-		//稳定版本应该是tree=tree->vertex>vertex?tree->left:tree->right;
+//稳定版本应该是tree=tree->vertex>vertex?tree->left:tree->right;
 	}
 	if (parent->vertex >= vertex)
 		parent->left = new;

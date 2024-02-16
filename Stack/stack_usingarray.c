@@ -42,7 +42,7 @@ int pop_stack (slink stack)
 	return stack->data[stack->sp--];
 }
 
-int main ()
+int main (void)
 {
 	slink stack = create_stack (5);
 	int data[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };

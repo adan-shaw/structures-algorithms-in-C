@@ -34,9 +34,9 @@ void basemethod (int **map, int nodesize)
 		i *= 2;
 	}
 	display_debug (nextmatrix, nodesize);
-	//for(int i=2;i<=nodesize-1;i++)
-	//  nextmatrix=getnextmatrix(nextmatrix,nodesize,map);
-	//display_debug(nextmatrix,nodesize);
+//for(int i=2;i<=nodesize-1;i++)
+//  nextmatrix=getnextmatrix(nextmatrix,nodesize,map);
+//display_debug(nextmatrix,nodesize);
 }
 
 int main (int argc, char const *argv[])
@@ -45,7 +45,7 @@ int main (int argc, char const *argv[])
 		return 1;
 	int nodesize;
 	int **map = read_map (argv[1], &nodesize);
-	//display_debug(map,nodesize);
+//display_debug(map,nodesize);
 	basemethod (map, nodesize);
 	return 0;
 }

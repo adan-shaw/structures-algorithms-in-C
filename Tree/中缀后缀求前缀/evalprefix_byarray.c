@@ -6,7 +6,7 @@ int sp;
 int findposition_infix (int *seq, int head, int rear, int target)
 {
 	int i;
-	for (i = rear - 1; i >= 0; i--)	//一定要逆序查找，因为有权值相同的结点，如根节点=1，在中序里，这个1应该是是最后一个1
+	for (i = rear - 1; i >= 0; i--)	//一定要逆序查找, 因为有权值相同的结点, 如根节点=1, 在中序里, 这个1应该是是最后一个1
 		if (seq[i] == target)
 			return i;
 	return -1;
@@ -22,9 +22,9 @@ void create_prefix (int *infix, int *suffix, int infixhead, int infixrear, int s
 	int root_position_infix = findposition_infix (infix, infixhead, infixrear, root_v);
 	int split_suffix = root_position_infix - infixhead + suffixhead;
 
-	//leftsubtree:
+//leftsubtree:
 	create_prefix (infix, suffix, infixhead, root_position_infix, suffixhead, split_suffix, prefix);
-	//rightsubtree:
+//rightsubtree:
 	create_prefix (infix, suffix, root_position_infix + 1, infixrear, split_suffix, suffixrear - 1, prefix);
 }
 

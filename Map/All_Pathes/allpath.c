@@ -12,7 +12,7 @@ void display_answer (int *answer, int size)
 
 void allpath (struct Graph *map, int *answer, int endnode, int step)
 {
-	//now handle step
+//now handle step
 	int prevnode = answer[step - 1];
 	if (prevnode == endnode)
 		display_answer (answer, step);
@@ -76,15 +76,15 @@ int main (int argc, char const *argv[])
 		return (1);
 	}
 	struct Graph *map = read_map (argv[1]);
-	//display_debug(map);
+//display_debug(map);
 	int startnode, endnode;
 	int answer[EDGE];
 	startnode = 0, endnode = 7;
-	//recursive
+//recursive
 	answer[0] = startnode;
 	allpath (map, answer, endnode, 1);
 	printf ("*************\n");
-	//no recursive
+//no recursive
 	allpath_nor (map, startnode, endnode);
 	return 0;
 }

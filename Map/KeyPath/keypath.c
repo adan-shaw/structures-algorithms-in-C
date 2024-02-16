@@ -50,7 +50,7 @@ void DFS_connect (struct Graph *map, int startnode, int *visited)
 {
 	push (startnode);
 	visited[startnode] = 1;
-	//printf("%d ",startnode );
+//printf("%d ",startnode );
 	int curno;
 	struct Node *cur;
 	while (!empty ())
@@ -59,7 +59,7 @@ void DFS_connect (struct Graph *map, int startnode, int *visited)
 		if ((cur = ifneiborOK (map, curno, visited)))
 		{
 			push (cur->vertex);
-			//printf("%d ",cur->vertex);
+//printf("%d ",cur->vertex);
 			visited[cur->vertex] = 1;
 		}
 		else
@@ -78,7 +78,7 @@ void DFS (struct Graph *map)
 	for (int i = 0; i < map->nodesize; i++)
 		if (!visited[i])
 			DFS_connect (map, i, visited);
-	//printf("\n");
+//printf("\n");
 }
 
 int *count_ve (struct Graph *map, int *topo_r)
@@ -94,7 +94,7 @@ int *count_ve (struct Graph *map, int *topo_r)
 		cur = map->nodes[nodeid]->next;
 		while (cur)
 		{
-			//nodeid===>cur->vertex
+//nodeid===>cur->vertex
 			if (ve[nodeid] + cur->weight > ve[cur->vertex])
 				ve[cur->vertex] = ve[nodeid] + cur->weight;
 			cur = cur->next;
@@ -117,7 +117,7 @@ int *count_vl (struct Graph *map, int *topo_r, int *ve)
 		cur = map->nodes[nodeid]->next;
 		while (cur)
 		{
-			// nodeid ===> cur->vertex
+// nodeid ===> cur->vertex
 			if (vl[nodeid] > vl[cur->vertex] - cur->weight)
 				vl[nodeid] = vl[cur->vertex] - cur->weight;
 			cur = cur->next;
@@ -134,7 +134,7 @@ void count_keypath (struct Graph *map, int *ve, int *vl)
 		cur = map->nodes[i]->next;
 		while (cur)
 		{
-			//i===>cur->vertex
+//i===>cur->vertex
 			if (ve[i] == vl[cur->vertex] - cur->weight)
 				printf ("%d==>%d\n", i, cur->vertex);
 			cur = cur->next;
@@ -151,8 +151,8 @@ int main (int argc, char const *argv[])
 	DFS (map);
 	int *ve = count_ve (map, topo_r);
 	int *vl = count_vl (map, topo_r, ve);
-	//PRINT(ve,map->nodesize);
-	//PRINT(vl,map->nodesize);
+//PRINT(ve,map->nodesize);
+//PRINT(vl,map->nodesize);
 	count_keypath (map, ve, vl);
 	return 0;
 }

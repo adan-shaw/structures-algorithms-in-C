@@ -10,7 +10,7 @@ void swap (int *data, int pos1, int pos2)
 
 void quicksplit_findtopk (int *data, int head, int rear, int k)
 {
-	//找出最小的K个
+//找出最小的K个
 	if (head >= rear)
 		return;
 	int pivot = data[rear - 1];

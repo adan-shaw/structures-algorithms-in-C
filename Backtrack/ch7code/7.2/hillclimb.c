@@ -158,14 +158,14 @@ void hillclimbing (int (*cube)[CUBE], int x, int y, int (*target)[CUBE])
 		}
 		pop ();
 		nodesszie = 0;
-		//up
+//up
 		cube_copy (currentnode->cube, tmpcube);
 		if (currentnode->x > 0)
 		{
 			move_up (tmpcube, currentnode->x, currentnode->y);
 			if (!inme (currentnode, tmpcube))
 			{
-				//   printf("UP!\n");
+//   printf("UP!\n");
 				node = malloc (sizeof (struct Node));
 				cube_copy (tmpcube, node->cube);
 				node->x = currentnode->x - 1, node->y = currentnode->y;
@@ -174,14 +174,14 @@ void hillclimbing (int (*cube)[CUBE], int x, int y, int (*target)[CUBE])
 				nodes[nodesszie++] = node;
 			}
 		}
-		//down
+//down
 		cube_copy (currentnode->cube, tmpcube);
 		if (currentnode->x < CUBE - 1)
 		{
 			move_down (tmpcube, currentnode->x, currentnode->y);
 			if (!inme (currentnode, tmpcube))
 			{
-				//printf("DOWN!\n");
+//printf("DOWN!\n");
 				node = malloc (sizeof (struct Node));
 				cube_copy (tmpcube, node->cube);
 				node->x = currentnode->x + 1, node->y = currentnode->y;
@@ -190,14 +190,14 @@ void hillclimbing (int (*cube)[CUBE], int x, int y, int (*target)[CUBE])
 				nodes[nodesszie++] = node;
 			}
 		}
-		//left
+//left
 		cube_copy (currentnode->cube, tmpcube);
 		if (currentnode->y > 0)
 		{
 			move_left (tmpcube, currentnode->x, currentnode->y);
 			if (!inme (currentnode, tmpcube))
 			{
-				// printf("LEFT\n");
+// printf("LEFT\n");
 				node = malloc (sizeof (struct Node));
 				cube_copy (tmpcube, node->cube);
 				node->x = currentnode->x, node->y = currentnode->y - 1;
@@ -206,14 +206,14 @@ void hillclimbing (int (*cube)[CUBE], int x, int y, int (*target)[CUBE])
 				nodes[nodesszie++] = node;
 			}
 		}
-		//right
+//right
 		cube_copy (currentnode->cube, tmpcube);
 		if (currentnode->y < CUBE - 1)
 		{
 			move_right (tmpcube, currentnode->x, currentnode->y);
 			if (!inme (currentnode, tmpcube))
 			{
-				// printf("RIGHT\n");
+// printf("RIGHT\n");
 				node = malloc (sizeof (struct Node));
 				cube_copy (tmpcube, node->cube);
 				node->x = currentnode->x, node->y = currentnode->y + 1;

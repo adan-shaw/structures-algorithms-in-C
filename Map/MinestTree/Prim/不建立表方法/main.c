@@ -65,7 +65,7 @@ int empty_heap (struct Heap *heap)
 struct HeapNode delete_heap (struct Heap *heap)
 {
 	struct HeapNode retval = heap->data[0];
-	//heap->data[0]=heap->data[heap->size-1];
+//heap->data[0]=heap->data[heap->size-1];
 	swap_heap (heap, 0, heap->size - 1);
 	heap->size--;
 	hold_heap (heap, 0);
@@ -123,7 +123,7 @@ void prim (struct Graph *map)
 			cur = cur->next;
 		}
 	}
-	//now print minest tree
+//now print minest tree
 	for (int i = 0; i < map->nodesize; i++)
 		printf ("%d,distance=%d,prev=%d\n", heap->data[i].vertex, heap->data[i].distance, heap->data[i].prev);
 }

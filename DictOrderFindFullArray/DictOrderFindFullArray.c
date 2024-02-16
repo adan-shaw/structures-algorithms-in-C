@@ -51,7 +51,7 @@ void full_array (int *set, int size)
 	}
 }
 
-int main ()
+int main (void)
 {
 	int set[] = { 1, 2, 3, 4, 5, 6 };
 	int size = sizeof (set) / sizeof (int);

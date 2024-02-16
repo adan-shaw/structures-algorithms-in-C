@@ -138,7 +138,7 @@ void hillclimbing (int (*cube)[CUBE], int x, int y, int (*target)[CUBE])
 		}
 		pop ();
 		nodesszie = 0;
-		//up
+//up
 		cube_copy (currentnode->cube, tmpcube);
 		if (currentnode->x > 0)
 		{
@@ -152,7 +152,7 @@ void hillclimbing (int (*cube)[CUBE], int x, int y, int (*target)[CUBE])
 				push (node);
 			}
 		}
-		//down
+//down
 		cube_copy (currentnode->cube, tmpcube);
 		if (currentnode->x < CUBE - 1)
 		{
@@ -166,7 +166,7 @@ void hillclimbing (int (*cube)[CUBE], int x, int y, int (*target)[CUBE])
 				push (node);
 			}
 		}
-		//left
+//left
 		cube_copy (currentnode->cube, tmpcube);
 		if (currentnode->y > 0)
 		{
@@ -180,7 +180,7 @@ void hillclimbing (int (*cube)[CUBE], int x, int y, int (*target)[CUBE])
 				push (node);
 			}
 		}
-		//right
+//right
 		cube_copy (currentnode->cube, tmpcube);
 		if (currentnode->y < CUBE - 1)
 		{

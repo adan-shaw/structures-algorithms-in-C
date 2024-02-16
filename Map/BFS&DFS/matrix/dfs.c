@@ -72,7 +72,7 @@ void depth_first_search (int **map, int nodesize)
 	int i;
 	for (i = 0; i < nodesize; i++)
 		if (!visited[i])
-			//depth_first_search_conneted_recursive(map,i,nodesize,visited);
+//depth_first_search_conneted_recursive(map,i,nodesize,visited);
 			depth_first_search_conneted_nor_recursive (map, i, nodesize, visited);
 	printf ("\n");
 }

@@ -110,7 +110,7 @@ int main (int argc, char const *argv[])
 	int k = atoi (argv[1]);
 	if (k > size)
 		k = size;
-	//找出最大的K个
+//找出最大的K个
 	struct Heap *heap = create_heap (k);
 	int i = 0;
 	while (i < size)

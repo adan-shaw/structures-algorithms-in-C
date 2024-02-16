@@ -96,7 +96,7 @@ void depth_first_search_conneted_nor_recursive_cool (struct Graph *map, int star
 				push (cur);
 			cur = cur->next;
 		}
-		//now...
+//now...
 	}
 	printf ("\n");
 }
@@ -107,8 +107,8 @@ void depth_first_search (struct Graph *map)
 	int i;
 	for (i = 0; i < map->nodesize; i++)
 		if (!visited[i])
-			//depth_first_search_conneted_recursive(map,i,visited);
-			//depth_first_search_conneted_nor_recursive(map,i,visited);
+//depth_first_search_conneted_recursive(map,i,visited);
+//depth_first_search_conneted_nor_recursive(map,i,visited);
 			depth_first_search_conneted_nor_recursive_cool (map, i, visited);
 	printf ("\n");
 }

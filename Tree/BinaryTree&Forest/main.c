@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "treeconvert.h"
 
-int main ()
+int main (void)
 {
 	tlink tree = (tlink) malloc (sizeof (struct Tree));
 	tree->vertex = 'A';

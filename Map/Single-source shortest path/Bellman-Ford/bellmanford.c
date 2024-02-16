@@ -19,7 +19,7 @@ int bellmanford (struct Graph *map)
 			cur = map->nodes[j]->next;
 			while (cur)
 			{
-				//j ---> cur->vertex
+//j ---> cur->vertex
 				if (shortestpath[cur->vertex] > shortestpath[j] + cur->weight)
 					shortestpath[cur->vertex] = shortestpath[j] + cur->weight;
 				cur = cur->next;
@@ -31,7 +31,7 @@ int bellmanford (struct Graph *map)
 		cur = map->nodes[i]->next;
 		while (cur)
 		{
-			//j ---> cur->vertex
+//j ---> cur->vertex
 			if (shortestpath[cur->vertex] > shortestpath[i] + cur->weight)
 				return 0;
 			cur = cur->next;

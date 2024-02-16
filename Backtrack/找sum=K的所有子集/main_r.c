@@ -37,7 +37,7 @@ void backtrace (int *answer, int step, int *set, int size)
 	}
 }
 
-int main ()
+int main (void)
 {
 	int set[] = { 7, 5, 1, 2, 8, 4, 3, 10 };
 	int size = ARRAYSIZE (set);

@@ -72,7 +72,7 @@ void topo_base_method (struct Graph *graph, map < int, string > node_hash)
 	{
 		if (indgrees[i])
 		{
-			cout << "有环。" << endl;
+			cout << "有环; " << endl;
 			break;
 		}
 	}
@@ -85,11 +85,11 @@ void dfs (struct Graph *graph, int startnode, int *visited, map < int, string > 
 		return;
 	if (visited[startnode] == 1)
 	{
-		cout << "有环。" << endl;
+		cout << "有环; " << endl;
 		return;
 	}
 	struct Node *cur = graph->nodes[startnode]->next;
-	//cout<<node_hash[startnode]<<" ";
+//cout<<node_hash[startnode]<<" ";
 	visited[startnode] = 1;
 	while (cur)
 	{

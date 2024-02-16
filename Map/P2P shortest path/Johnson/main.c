@@ -13,7 +13,7 @@ int bellman_ford (struct Graph *map, int *distance, int source)
 			cur = map->nodes[j]->next;
 			while (cur)
 			{
-				//i=>cur->vertex
+//i=>cur->vertex
 				if (distance[j] + cur->weight < distance[cur->vertex])
 					distance[cur->vertex] = distance[j] + cur->weight;
 				cur = cur->next;
@@ -25,7 +25,7 @@ int bellman_ford (struct Graph *map, int *distance, int source)
 		cur = map->nodes[i]->next;
 		while (cur && ok)
 		{
-			//i=>cur->vertex
+//i=>cur->vertex
 			if (distance[i] + cur->weight < distance[cur->vertex])
 				ok = 0;
 			cur = cur->next;
@@ -42,7 +42,7 @@ void change2positive (struct Graph *map, int *distance)
 	map->nodesize++;
 	for (int i = 0; i < source; i++)
 		graph_insertedge (map, source, i, 0);
-	//display_debug(map);
+//display_debug(map);
 	distance[source] = 0;
 	int status = bellman_ford (map, distance, source);
 	if (!status)
@@ -53,7 +53,7 @@ void change2positive (struct Graph *map, int *distance)
 		cur = map->nodes[i]->next;
 		while (cur)
 		{
-			//i => cur->vertex
+//i => cur->vertex
 			cur->weight += distance[i] - distance[cur->vertex];
 			cur = cur->next;
 		}
@@ -88,7 +88,7 @@ void dijkstra (struct Graph *map, int source, int *h, int *distance)
 		cur = map->nodes[find]->next;
 		while (cur)
 		{
-			//find=>cur->vertex
+//find=>cur->vertex
 			if (distance[find] + cur->weight < distance[cur->vertex])
 				distance[cur->vertex] = distance[find] + cur->weight;
 			cur = cur->next;
@@ -115,7 +115,7 @@ void johnson (struct Graph *map, int *h)
 		printf ("%d", i);
 		for (int j = 0; j < map->nodesize; j++)
 		{
-			//node=j,source=i
+//node=j,source=i
 			retval[i][j] += h[j] - h[i];
 			printf ("\t%d", retval[i][j]);
 		}
@@ -160,7 +160,7 @@ int main (int argc, char const *argv[])
 	fflush (map_file);
 	fclose (map_file);
 
-	//display_debug(map);
+//display_debug(map);
 	int *distance = malloc (sizeof (int) * (map->nodesize + 1));
 	for (int i = 0; i < map->nodesize; i++)
 		distance[i] = SHRT_MAX;

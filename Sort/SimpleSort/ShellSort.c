@@ -29,12 +29,12 @@ void shellsort (int *data, int size)
 	}
 }
 
-int main ()
+int main (void)
 {
 	/*
 	   时间复杂度:O(n^2)
 	   空间复杂度:O(1)
-	   思路:对于每个位置，找到最小元素；一次循环后对应位置的数一定是当前最小的。
+	   思路:对于每个位置, 找到最小元素; 一次循环后对应位置的数一定是当前最小的; 
 	 */
 	int data[] = { 81, 94, 11, 96, 12, 35, 17, 95, 28, 58, 41, 75, 15 };
 	int size = sizeof (data) / sizeof (int);
